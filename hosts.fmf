@@ -3,14 +3,22 @@ domain: kos.kjnet.xyz
 /nas1:
   ip: 172.22.13.2
   purpose: persistent storage server
+  memory:
+    size: 8
 /nas2:
   ip: 172.22.13.6
   purpose: ephemeral storage server
+  memory:
+    size: 32
 /db2:
   ip: 172.22.13.220
   purpose: etcd database server
+  memory:
+    size: 8
 /optiplex:
   purpose: Kubernetes worker node
+  memory:
+    size: 16
   /op01:
     ip: 172.22.13.21
     purpose: Kubernetes master node

@@ -5,14 +5,26 @@ import fmf
 
 tree = fmf.Tree('.')
 
-must_set = ('name','ip','purpose')
+must_set = ('name','ip','purpose','memory/size')
+
+def check(node, path, data):
+    curr_path = ''
+    for key in path.split('/'):
+        if not curr_path:
+            curr_path = key
+        else:
+            curr_path = curr_path + '/' + key
+        if key not in data:
+            raise Exception(f"Host node {node.name} has missing required key {curr_path}")
+        data = data[key]
+        
+
 hosts = []
 for node in tree.prune(keys=('ip',)):
     data = {'name': os.path.basename(node.name)}
     data.update(node.data)
     for key in must_set:
-        if key not in data:
-            raise Exception(f"Host node {node.name} has missing required key {key}")
+        check(node, key, data)
     hosts.append(data)
 
 
