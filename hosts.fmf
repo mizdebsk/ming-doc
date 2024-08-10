@@ -7,6 +7,9 @@ location:
   ip: 172.22.13.2
   purpose: persistent storage server
   os: AlmaLinux 8
+  cpu:
+    model: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
+    cores: 4
   memory:
     size: 8
     type: DDR3 DIMM
@@ -16,6 +19,9 @@ location:
   ip: 172.22.13.6
   purpose: ephemeral storage server
   os: CentOS Linux 7
+  cpu:
+    model: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
+    cores: 4
   memory:
     size: 32
     type: DDR3 DIMM
@@ -25,6 +31,9 @@ location:
   ip: 172.22.13.220
   purpose: etcd database server
   os: AlmaLinux 8
+  cpu:
+    model: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
+    cores: 4
   memory:
     size: 8
     type: DDR3 DIMM
@@ -33,6 +42,9 @@ location:
 /optiplex:
   purpose: Kubernetes worker node
   os: AlmaLinux 8
+  cpu:
+    model: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
+    cores: 4
   memory:
     size: 16
     type: DDR3 DIMM

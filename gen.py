@@ -10,6 +10,8 @@ must_set = (
     'ip',
     'purpose',
     'os',
+    'cpu/model',
+    'cpu/cores',
     'memory/size',
     'memory/type',
     'memory/speed',
