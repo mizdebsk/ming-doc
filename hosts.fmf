@@ -9,6 +9,22 @@
     site: Olszewo-Borki Kosynierów
   domain: kos.kjnet.xyz
 
+  /ryzen:
+    ip: 172.22.13.9
+    purpose: workstation
+    location+:
+      room: office
+    cpu:
+      model: AMD Ryzen 9 3900X 12-Core Processor
+      cores: 24
+    memory:
+      size: 64
+      type: DDR4 DIMM
+      speed: 3200
+      config: 2x32
+    model: Micro-Star MS-7C37
+    os: Fedora Linux
+
   /lab:
     location+:
       room: Lab server room
