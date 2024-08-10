@@ -9,6 +9,7 @@ must_set = (
     'name',
     'ip',
     'purpose',
+    'model',
     'os',
     'cpu/model',
     'cpu/cores',
