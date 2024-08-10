@@ -1,135 +1,168 @@
-domain: kos.kjnet.xyz
-location:
-  site: Olszewo-Borki Kosynierów
-  room: Lab server room
+/czwartakow:
+  location:
+    site: Olszewo-Borki Czwartaków
+  domain: obr.kjnet.xyz
+  select: false
 
-/nas1:
-  ip: 172.22.13.2
-  purpose: persistent storage server
-  model: HP Compaq Elite 8300 SFF
-  os: AlmaLinux 8
-  cpu:
-    model: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
-    cores: 4
-  memory:
-    size: 8
-    type: DDR3 DIMM
-    speed: 1600
-    config: 4x2
-/nas2:
-  ip: 172.22.13.6
-  purpose: ephemeral storage server
-  model: HP Compaq Pro 6300 SFF
-  os: CentOS Linux 7
-  cpu:
-    model: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
-    cores: 4
-  memory:
-    size: 32
-    type: DDR3 DIMM
-    speed: 1600
-    config: 4x8
-/db2:
-  ip: 172.22.13.220
-  purpose: etcd database server
-  model: HP Compaq Elite 8300 SFF
-  os: AlmaLinux 8
-  cpu:
-    model: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
-    cores: 4
-  memory:
-    size: 8
-    type: DDR3 DIMM
-    speed: 1600
-    config: 4x2
-/optiplex:
-  purpose: Kubernetes worker node
-  model: Dell OptiPlex 7010
-  os: AlmaLinux 8
-  cpu:
-    model: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
-    cores: 4
-  memory:
-    size: 16
-    type: DDR3 DIMM
-    speed: 1600
-    config: 4x4
-  /op01:
-    ip: 172.22.13.21
-    purpose: Kubernetes master node
-    model~: /7010/9010/
-    memory+:
-      config: 2x8
-  /op02:
-    ip: 172.22.13.22
-    model~: /7010/9010/
-    memory+:
-      config: 2x8
-  /op03:
-    ip: 172.22.13.23
-    model~: /7010/9010/
-    memory+:
-      config: 2x8
-  /op04:
-    ip: 172.22.13.24
-    model~: /7010/9010/
-    memory+:
-      config: 2x8
-  /op05:
-    ip: 172.22.13.25
-    memory+:
-      config: 2x8
-  /op06:
-    ip: 172.22.13.26
-    memory+:
-      config: 2x8
-  /op07:
-    ip: 172.22.13.27
-  /op08:
-    ip: 172.22.13.28
-    memory+:
-      config: 2x8
-  /op09:
-    ip: 172.22.13.29
-  /op10:
-    ip: 172.22.13.30
-    memory+:
-      config: 2x8
-  /op11:
-    ip: 172.22.13.31
-    memory+:
-      speed: 1333
-  /op12:
-    ip: 172.22.13.32
-    memory+:
-      speed: 1333
-  /op13:
-    ip: 172.22.13.33
-    memory+:
-      speed: 1333
-  /op14:
-    ip: 172.22.13.34
-    memory+:
-      speed: 1333
-  /op15:
-    ip: 172.22.13.35
-    memory+:
-      speed: 1333
-  /op16:
-    ip: 172.22.13.36
-    memory+:
-      speed: 1333
-  /op17:
-    ip: 172.22.13.37
-  /op18:
-    ip: 172.22.13.38
-    memory+:
-      speed: 1333
-  /op19:
-    ip: 172.22.13.39
-    memory+:
-      speed: 1333
-  /op20:
-    ip: 172.22.13.40
-    memory+:
-      speed: 1333
+/kosynierow:
+  location:
+    site: Olszewo-Borki Kosynierów
+  domain: kos.kjnet.xyz
+
+  /lab:
+    location+:
+      room: Lab server room
+
+    /nas1:
+      ip: 172.22.13.2
+      purpose: persistent storage server
+      model: HP Compaq Elite 8300 SFF
+      os: AlmaLinux 8
+      cpu:
+        model: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
+        cores: 4
+      memory:
+        size: 8
+        type: DDR3 DIMM
+        speed: 1600
+        config: 4x2
+
+    /nas2:
+      ip: 172.22.13.6
+      purpose: ephemeral storage server
+      model: HP Compaq Pro 6300 SFF
+      os: CentOS Linux 7
+      cpu:
+        model: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
+        cores: 4
+      memory:
+        size: 32
+        type: DDR3 DIMM
+        speed: 1600
+        config: 4x8
+
+    /db2:
+      ip: 172.22.13.220
+      purpose: etcd database server
+      model: HP Compaq Elite 8300 SFF
+      os: AlmaLinux 8
+      cpu:
+        model: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
+        cores: 4
+      memory:
+        size: 8
+        type: DDR3 DIMM
+        speed: 1600
+        config: 4x2
+
+    /optiplex:
+      purpose: Kubernetes worker node
+      model: Dell OptiPlex 7010
+      os: AlmaLinux 8
+      cpu:
+        model: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
+        cores: 4
+      memory:
+        size: 16
+        type: DDR3 DIMM
+        speed: 1600
+        config: 4x4
+
+      /op01:
+        ip: 172.22.13.21
+        purpose: Kubernetes master node
+        model~: /7010/9010/
+        memory+:
+          config: 2x8
+
+      /op02:
+        ip: 172.22.13.22
+        model~: /7010/9010/
+        memory+:
+          config: 2x8
+
+      /op03:
+        ip: 172.22.13.23
+        model~: /7010/9010/
+        memory+:
+          config: 2x8
+
+      /op04:
+        ip: 172.22.13.24
+        model~: /7010/9010/
+        memory+:
+          config: 2x8
+
+      /op05:
+        ip: 172.22.13.25
+        memory+:
+          config: 2x8
+
+      /op06:
+        ip: 172.22.13.26
+        memory+:
+          config: 2x8
+
+      /op07:
+        ip: 172.22.13.27
+
+      /op08:
+        ip: 172.22.13.28
+        memory+:
+          config: 2x8
+
+      /op09:
+        ip: 172.22.13.29
+
+      /op10:
+        ip: 172.22.13.30
+        memory+:
+          config: 2x8
+
+      /op11:
+        ip: 172.22.13.31
+        memory+:
+          speed: 1333
+
+      /op12:
+        ip: 172.22.13.32
+        memory+:
+          speed: 1333
+
+      /op13:
+        ip: 172.22.13.33
+        memory+:
+          speed: 1333
+
+      /op14:
+        ip: 172.22.13.34
+        memory+:
+          speed: 1333
+
+      /op15:
+        ip: 172.22.13.35
+        memory+:
+          speed: 1333
+
+      /op16:
+        ip: 172.22.13.36
+        memory+:
+          speed: 1333
+
+      /op17:
+        ip: 172.22.13.37
+
+      /op18:
+        ip: 172.22.13.38
+        memory+:
+          speed: 1333
+
+      /op19:
+        ip: 172.22.13.39
+        memory+:
+          speed: 1333
+
+      /op20:
+        ip: 172.22.13.40
+        memory+:
+          speed: 1333
