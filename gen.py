@@ -5,10 +5,14 @@ import fmf
 
 tree = fmf.Tree('.')
 
+must_set = ('name','ip','purpose')
 hosts = []
 for node in tree.prune(keys=('ip',)):
     data = {'name': os.path.basename(node.name)}
     data.update(node.data)
+    for key in must_set:
+        if key not in data:
+            raise Exception(f"Host node {node.name} has missing required key {key}")
     hosts.append(data)
 
 
