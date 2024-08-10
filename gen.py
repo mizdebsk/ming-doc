@@ -5,7 +5,7 @@ import fmf
 
 tree = fmf.Tree('.')
 
-must_set = ('name','ip','purpose','memory/size')
+must_set = ('name','ip','purpose','os','memory/size')
 
 def check(node, path, data):
     curr_path = ''
