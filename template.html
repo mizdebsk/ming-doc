@@ -2,8 +2,9 @@
   
 {% for host in hosts %}
 
-<h2>{{ host.name }}</h2>
-<p>IP: {{ host.ip }}</p>
+<h2>{{host.name}}</h2>
+<p>Full name: {{host.name}}.{{host.domain}}</p>
+<p>IP: {{host.ip}}</p>
 
 {% endfor %}
 

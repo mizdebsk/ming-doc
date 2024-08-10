@@ -1,3 +1,4 @@
+domain: kos.kjnet.xyz
 /nas1:
   ip: 172.22.13.2
 /nas2:
