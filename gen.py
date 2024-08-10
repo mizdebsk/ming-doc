@@ -11,6 +11,9 @@ must_set = (
     'purpose',
     'os',
     'memory/size',
+    'memory/type',
+    'memory/speed',
+    'memory/config',
     'location/site',
     'location/room',
 )

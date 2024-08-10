@@ -9,61 +9,107 @@ location:
   os: AlmaLinux 8
   memory:
     size: 8
+    type: DDR3 DIMM
+    speed: 1600
+    config: 4x2
 /nas2:
   ip: 172.22.13.6
   purpose: ephemeral storage server
   os: CentOS Linux 7
   memory:
     size: 32
+    type: DDR3 DIMM
+    speed: 1600
+    config: 4x8
 /db2:
   ip: 172.22.13.220
   purpose: etcd database server
   os: AlmaLinux 8
   memory:
     size: 8
+    type: DDR3 DIMM
+    speed: 1600
+    config: 4x2
 /optiplex:
   purpose: Kubernetes worker node
   os: AlmaLinux 8
   memory:
     size: 16
+    type: DDR3 DIMM
+    speed: 1600
+    config: 4x4
   /op01:
     ip: 172.22.13.21
     purpose: Kubernetes master node
+    memory+:
+      config: 2x8
   /op02:
     ip: 172.22.13.22
+    memory+:
+      config: 2x8
   /op03:
     ip: 172.22.13.23
+    memory+:
+      config: 2x8
   /op04:
     ip: 172.22.13.24
+    memory+:
+      config: 2x8
   /op05:
     ip: 172.22.13.25
+    memory+:
+      config: 2x8
   /op06:
     ip: 172.22.13.26
+    memory+:
+      config: 2x8
   /op07:
     ip: 172.22.13.27
   /op08:
     ip: 172.22.13.28
+    memory+:
+      config: 2x8
   /op09:
     ip: 172.22.13.29
   /op10:
     ip: 172.22.13.30
+    memory+:
+      config: 2x8
   /op11:
     ip: 172.22.13.31
+    memory+:
+      speed: 1333
   /op12:
     ip: 172.22.13.32
+    memory+:
+      speed: 1333
   /op13:
     ip: 172.22.13.33
+    memory+:
+      speed: 1333
   /op14:
     ip: 172.22.13.34
+    memory+:
+      speed: 1333
   /op15:
     ip: 172.22.13.35
+    memory+:
+      speed: 1333
   /op16:
     ip: 172.22.13.36
+    memory+:
+      speed: 1333
   /op17:
     ip: 172.22.13.37
   /op18:
     ip: 172.22.13.38
+    memory+:
+      speed: 1333
   /op19:
     ip: 172.22.13.39
+    memory+:
+      speed: 1333
   /op20:
     ip: 172.22.13.40
+    memory+:
+      speed: 1333
