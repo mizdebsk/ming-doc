@@ -1,4 +1,7 @@
 domain: kos.kjnet.xyz
+location:
+  site: Olszewo-Borki Kosynierów
+  room: Lab server room
 
 /nas1:
   ip: 172.22.13.2
