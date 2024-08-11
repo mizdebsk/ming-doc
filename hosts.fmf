@@ -46,6 +46,28 @@
     location+:
       room: Lab server room
 
+    /p1:
+      ip: 172.22.13.8
+      purpose: Kubernetes node
+      model: Lenovo ThinkPad P1 Gen 3
+      description: |
+        Red Hat laptop used as Kubernetes node.
+        Lenovo serial number R914B5EW
+      os: AlmaLinux 8
+      cpu:
+        model: Intel(R) Core(TM) i7-10850H CPU @ 2.70GHz
+        cores: 12
+      memory:
+        size: 32
+        type: DDR4 DIMM
+        speed: 2933
+        config: 1x32
+      nic:
+        name: enp44s0u2
+        mac: 3c:18:a0:5a:b0:a1
+        speed: 1000
+      playbook: null
+
     /nas1:
       ip: 172.22.13.2
       purpose: persistent storage server
@@ -64,6 +86,11 @@
     /nas2:
       ip: 172.22.13.6
       purpose: ephemeral storage server
+      description: |
+        In short: exports tmpfs over NFS. Fast ephemeral storage for
+        data that needs to be accessed concurrently by tens of workers
+        at the same time. The server needs to have as much memory as
+        possible and as fast network as possible.
       model: HP Compaq Pro 6300 SFF
       os: CentOS Linux 7
       cpu:
