@@ -24,6 +24,7 @@
       config: 2x32
     model: Micro-Star MS-7C37
     os: Fedora Linux
+    playbook: /home/kojan/git/carbon/ws.yml
 
   /lab:
     location+:
@@ -42,6 +43,7 @@
         type: DDR3 DIMM
         speed: 1600
         config: 4x2
+      playbook: null
 
     /nas2:
       ip: 172.22.13.6
@@ -56,6 +58,7 @@
         type: DDR3 DIMM
         speed: 1600
         config: 4x8
+      playbook: null
 
     /db2:
       ip: 172.22.13.220
@@ -70,6 +73,7 @@
         type: DDR3 DIMM
         speed: 1600
         config: 4x2
+      playbook: /home/kojan/git/koming/ansible/etcd.yml
 
     /optiplex:
       purpose: Kubernetes worker node
@@ -83,6 +87,7 @@
         type: DDR3 DIMM
         speed: 1600
         config: 4x4
+      playbook: /home/kojan/git/koming/ansible/nodes.yml
 
       /op01:
         ip: 172.22.13.21
@@ -90,6 +95,7 @@
         model~: /7010/9010/
         memory+:
           config: 2x8
+        playbook: /home/kojan/git/koming/ansible/control.yml
 
       /op02:
         ip: 172.22.13.22

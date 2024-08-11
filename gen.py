@@ -19,6 +19,7 @@ must_set = (
     'memory/config',
     'location/site',
     'location/room',
+    'playbook',
 )
 
 def check(node, path, data):
