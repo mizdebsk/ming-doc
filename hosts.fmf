@@ -1,8 +1,24 @@
 /czwartakow:
   location:
     site: Olszewo-Borki Czwartaków
-  domain: obr.kjnet.xyz
-  select: false
+  domain: kos.kjnet.xyz
+
+  /qotom1:
+    ip: 172.22.13.5
+    purpose: virthost for hosting pfSense router
+    location+:
+      room: attic
+    cpu:
+      model: Intel(R) Celeron(R) CPU J1900 @ 1.99GHz
+      cores: 4
+    memory:
+      size: 8
+      type: DDR3 DIMM
+      speed: 1333
+      config: 1x8
+    model: Qotom Mini PC Q190G4U
+    os: CentOS Linux 7
+    playbook: /home/kojan/git/ming/playbooks/qotom.yml
 
 /kosynierow:
   location:
